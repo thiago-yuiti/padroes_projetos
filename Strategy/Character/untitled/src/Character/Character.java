@@ -2,7 +2,7 @@ package Character;
 
 import Weapon.WeaponBehavior;
 
-public class Character {
+public abstract class Character {
     WeaponBehavior weaponBehavior;
     public void Character() {}
 
