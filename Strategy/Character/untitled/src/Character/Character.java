@@ -1,5 +1,7 @@
 package Character;
 
+import Weapon.WeaponBehavior;
+
 public class Character {
     WeaponBehavior weaponBehavior;
     public void Character() {}
@@ -8,6 +10,6 @@ public class Character {
         weaponBehavior.useWeapon();
     }
     public void setWeapon(WeaponBehavior wp) {
-        this.weapon = wp;
+        this.weaponBehavior = wp;
     }
 }
