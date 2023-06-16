@@ -21,9 +21,12 @@ public abstract class Pizza {
     }
 
     void cut() {
-        System.out.println("Place pizza in official PizzaStore box");
+        System.out.println("Cutting the pizza into diagona slices");
     }
 
+    void box() {
+        System.out.println("Place pizza in official PizzaStore box");
+    }
     public String getName() {
         return name;
     }
