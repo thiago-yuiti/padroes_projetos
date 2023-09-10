@@ -1,13 +1,24 @@
+import java.time.chrono.MinguoDate;
+
 public class NYPizzaStore extends PizzaStore {
-    public Pizza createPizza(String item) {
+    protected Pizza createPizza(String item) {
+        Pizza pizza = null;
+        PizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();
+
         if (item.equals("cheese")) {
-            return new NYStyleCheesePizza();
+            pizza = new CheesePizza(ingredientFactory);
+            pizza.setName("Cheese Pizza in NYSTyle");
         } else if (item.equals("veggie")) {
-            return new NYStyleVeggiePizza();
+            pizza = new VeggiePizza(ingredientFactory);
+            pizza.setName("Veggie Pizza in NYSTyle");
         } else if (item.equals("clam")) {
-            return new NYStyleClamPizza();
+            pizza = new ClamPizza(ingredientFactory);
+            pizza.setName("Clam Pizza in NYSTyle");
         } else if (item.equals("pepperoni")) {
-            return new NYStylePepperoniPizza();
-        } else return null;
+            pizza = new PepperoniPizza(ingredientFactory);
+            pizza.setName("Pepperoni Pizza in NYSTyle");
+        }
+        return pizza;
     }
 }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
